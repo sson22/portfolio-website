@@ -278,6 +278,7 @@ p {
 }
 .contact__title {
   color: var(--color-dark-blue);
+  margin-bottom: -10px;
 }
 .contact__email {
   color: var(--color-light-white);
@@ -290,7 +291,7 @@ p {
 .contact__icon {
   font-size: var(--font-medium);
   color: var(--color-light-white);
-  margin: 5px;
+  margin: 10px 5px;
 }
 /* For below 769px screen width */
 @media screen and (max-width: 769) {
