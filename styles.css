@@ -122,7 +122,7 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 38px;
+  top: 48px;
   right: 38px;
   font-size: 24px;
   display: none;
@@ -359,7 +359,7 @@ p {
   margin-bottom: -10px;
 }
 .contact__email {
-  color: var(--color-light-white);
+  color: var(--color- light-white);
   font-size: var(--font-small);
 }
 .contact__copyrights {
@@ -372,7 +372,7 @@ p {
   margin: 10px 5px;
 }
 /* For below 769px screen width */
-@media screen and (max-width: 769) {
+@media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
   }
@@ -382,5 +382,31 @@ p {
   }
   .navbar__menu {
     flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .about__stack {
+    flex-direction: column;
+  }
+  .stack__line {
+    display: none;
+  }
+  .stack {
+    margin-bottom: 38px;
+  }
+  .stack__description {
+    width: 100%;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .skillset__right {
+    margin-top: 20px;
+    width: 80%;
+  }
+
+  .project {
+    flex-grow: 1;
   }
 }
