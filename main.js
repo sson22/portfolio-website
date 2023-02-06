@@ -43,3 +43,30 @@ function init() {
 }
 
 init();
+
+//Projects
+
+const projectButton = document.querySelector(".project__categories");
+const projectContainer = document.querySelector(".project__list");
+const projects = document.querySelectorAll(".project");
+
+projectButton.addEventListener("click", function (e) {
+  e.stopPropagation();
+  const filter = e.target.dataset.filter;
+  console.log(filter);
+  //   console.log(project);
+  //   console.log(projects[0].dataset);
+  if (filter == null) return;
+  projectContainer.classList.add("ani-out");
+  setTimeout(() => {
+    projectContainer.classList.remove("ani-out");
+  }, 300);
+  for (let project of projects) {
+    if (filter === project.dataset.type || filter === "*") {
+      console.log(project);
+      project.classList.remove("invisible");
+    } else {
+      project.classList.add("invisible");
+    }
+  }
+});
