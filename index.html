@@ -20,27 +20,30 @@
     <script src="main.js" defer></script>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo" id="navbar__logo">
+        <i
+          class="fa-solid fa-paper-plane navbar__icon"
+          id="navbar__logo__icon"
+        ></i>
+        <a href="#" id="navbar__logo__name" class="">sophie</a>
+      </div>
+
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#project">Project</li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
+      </ul>
+      <!-- Toggle Button -->
+      <button class="navbar__toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
     <!-- Home -->
     <section id="home">
-      <!-- Navbar -->
-      <nav id="navbar">
-        <div class="navbar__logo">
-          <i class="fa-solid fa-paper-plane navbar__icon"></i>
-          <a href="#">sophie</a>
-        </div>
-
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item active">Home</li>
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">Project</li>
-          <li class="navbar__menu__item">Contact</li>
-        </ul>
-        <!-- Toggle Button -->
-        <button class="navbar__toggle-btn">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </nav>
       <div class="home__content">
         <div class="home__left">
           <h1 class="home__title">
@@ -51,9 +54,6 @@
             A recent University Graduate with a degree in Computer Science,
             currently residing in Australia
           </h2>
-          <a href="mailto: subins@student.unimelb.edu.au">
-            <button class="home__contact">Contact Me</button></a
-          >
         </div>
         <div class="home__right">
           <img
@@ -183,15 +183,17 @@
       <div class="section">
         <h1>Projects</h1>
         <div class="project__categories">
-          <button class="category__btn active">All</button>
+          <button class="category__btn active" data-filter="*">All</button>
 
-          <button class="category__btn">Front-end</button>
+          <button class="category__btn" data-filter="front-end">
+            Front-end
+          </button>
 
-          <button class="category__btn">Back-end</button>
+          <button class="category__btn" data-filter="back-end">Back-end</button>
         </div>
 
         <div class="project__list">
-          <a href="" class="project" target="_blank">
+          <a href="" class="project" target="_blank" data-type="front-end">
             <img
               src="images/projects/portfolio.jpg"
               alt="Momentum"
@@ -203,7 +205,30 @@
             </div>
           </a>
 
-          <a href="" class="project" target="_blank">
+          <a href="" class="project" target="_blank" data-type="front-end">
+            <img
+              src="images/projects/portfolio.jpg"
+              alt="Momentum"
+              class="project__image"
+            />
+            <div class="project__description">
+              <h3>Front-end Clone</h3>
+              <span>Clone coding with VanillaJS</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="_blank" data-type="back-end">
+            <img
+              src="images/projects/portfolio.jpg"
+              alt="Momentum"
+              class="project__image"
+            />
+            <div class="project__description">
+              <h3>Back-end Clone</h3>
+              <span>Clone coding with VanillaJS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="back-end">
             <img
               src="images/projects/portfolio.jpg"
               alt="Momentum"
@@ -215,61 +240,14 @@
             </div>
           </a>
 
-          <a href="" class="project" target="_blank">
+          <a href="" class="project" target="_blank" data-type="front-end">
             <img
               src="images/projects/portfolio.jpg"
               alt="Momentum"
               class="project__image"
             />
             <div class="project__description">
-              <h3>Momentum Clone</h3>
-              <span>Clone coding with VanillaJS</span>
-            </div>
-          </a>
-          <a href="" class="project" target="_blank">
-            <img
-              src="images/projects/portfolio.jpg"
-              alt="Momentum"
-              class="project__image"
-            />
-            <div class="project__description">
-              <h3>Momentum Clone</h3>
-              <span>Clone coding with VanillaJS</span>
-            </div>
-          </a>
-
-          <a href="" class="project" target="_blank">
-            <img
-              src="images/projects/portfolio.jpg"
-              alt="Momentum"
-              class="project__image"
-            />
-            <div class="project__description">
-              <h3>Momentum Clone</h3>
-              <span>Clone coding with VanillaJS</span>
-            </div>
-          </a>
-
-          <a href="" class="project" target="_blank">
-            <img
-              src="images/projects/portfolio.jpg"
-              alt="Momentum"
-              class="project__image"
-            />
-            <div class="project__description">
-              <h3>Momentum Clone</h3>
-              <span>Clone coding with VanillaJS</span>
-            </div>
-          </a>
-
-          <a href="" class="project" target="_blank">
-            <img
-              src="images/projects/portfolio.jpg"
-              alt="Momentum"
-              class="project__image"
-            />
-            <div class="project__description">
-              <h3>Momentum Clone</h3>
+              <h3>Front-end2 Clone</h3>
               <span>Clone coding with VanillaJS</span>
             </div>
           </a>
@@ -281,8 +259,8 @@
       <div class="section">
         <h1 class="contact__title">Contact me</h1>
 
-        <a href="mailto: subins@student.unimelb.edu.au">
-          <h2 class="contact__email">subins@student.unimelb.edu.au</h2></a
+        <a href="mailto: sophiesbson@gmail.com">
+          <h2 class="contact__email">sophiesbson@gmail.com</h2></a
         >
 
         <div class="contact__links">
@@ -293,7 +271,7 @@
             <i class="fa-brands fa-linkedin contact__icon"></i>
           </a>
           <p class="contact__copyrights">
-            2022 Sophie Son Portfolio- All rights reserved
+            2023 Sophie Son Portfolio- All rights reserved
           </p>
         </div>
       </div>
